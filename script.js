@@ -1,18 +1,10 @@
 var input = document.getElementById('input');
 var output = document.getElementById('output');
-var imageToAlter = document.getElementById('no-output')
 
 function onlyContainsLowercase(str) {
-    return /^[a-z]+$/.test(str);
+    return /^[a-z/ /¿?¡!]+$/.test(str);
 }
 
-function DisplayNone(element){
-    document.querySelector(element).style.display = "none";
-}
-
-function DisplayBlock(element){
-    document.querySelector(element).style.display = "block";
-}
 
 function Encriptar(){
     if(onlyContainsLowercase(input.value)){
@@ -23,7 +15,9 @@ function Encriptar(){
             'o': 'ober',
             'u': 'ufat',
         };
-    
+
+        document.getElementById('no-output').style.display = "none";
+
         var textoEncriptado = input.value.replace(/[eiaou]/g, m => chars[m])
     
         output.textContent = textoEncriptado;
@@ -41,7 +35,8 @@ function Desencriptar(){
             'ober' : 'o',
             'ufat' : 'u',
         };
-    
+        document.getElementById('no-output').style.display = "none";
+        
         var textoDesencriptado = input.value.replace(/enter|imes|ai|ober|ufat/g, m => chars[m])
     
         output.textContent = textoDesencriptado;

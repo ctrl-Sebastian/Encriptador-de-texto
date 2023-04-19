@@ -4,14 +4,14 @@
     margin: 1.5%;
 }
 body{
-    text-align: center;
+
     color: white;
 
     background: #373941;
 }
 
 main{
-
+    
 }
 
 form{
@@ -30,6 +30,9 @@ textarea{
 }
 
 section{
+    position: absolute;
+    left: 50%;
+    top: 15%;
     text-align: center;
 
     color: black;
@@ -87,6 +90,10 @@ section{
     flex-grow: 0;
 }
 
+#output{
+    color: #0A3871;
+}
+
 .copiar{
     font-weight: normal;
     font-size: 14px;
@@ -113,7 +120,11 @@ footer ul,a{
 
 @media screen and (max-width: 480px){
     .buttons{
-        
+        flex-direction: column;
+    }
+
+    section{
+        margin-top: 45%;
     }
 
     textarea{
@@ -124,5 +135,9 @@ footer ul,a{
 
     .ig-pfp{
         width: 50%;
+    }
+
+    footer ul{
+        padding-left: 0;
     }
 }
