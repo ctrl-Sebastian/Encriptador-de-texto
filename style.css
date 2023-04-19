@@ -119,22 +119,30 @@ footer ul,a{
 }
 
 @media screen and (max-width: 480px){
+    form{
+        position: inherit;
+    }
+    
     .buttons{
-        flex-direction: column;
+        width: 400px;
+        
+    }
+    .button{
+        font-size: 18px;
     }
 
     section{
-        margin-top: 45%;
+        position: inherit;
     }
 
     textarea{
-        width: 200px;
+        width: 300px;
         font-weight: 200;
         font-size: 16px;
     }
 
     .ig-pfp{
-        width: 50%;
+        width: 25%;
     }
 
     footer ul{
